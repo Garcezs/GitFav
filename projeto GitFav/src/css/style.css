@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-body: #000000;
+  --bg-fav: #092d38;
+  --bg-odd: #030b0d;
+  --bg-even: #06181c;
+  --bg-textinput: #06181c;
+  --bg-favbutton: #065e7c;
+
+  --placeholder-color: #7c7c8a;
+  --font-color: #e1e1e6;
+  --remove-color: #f75a68;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--bg-body);
+  color: var(--font-color);
+}
+
+body * {
+  font-family: "Roboto", sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+#app {
+  padding: 2rem;
+  max-width: 112rem;
+  margin: 11.5rem auto;
+}
+
+.logo svg {
+  width: 18.63rem;
+  height: 3.28rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 8.7rem;
+}
+
+.search {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.search input {
+  padding: 1.6rem;
+  width: 46.2rem;
+
+  border-style: none;
+  border-radius: 0.5rem;
+
+  background: var(--bg-textinput);
+  color: white;
+}
+
+::placeholder {
+  color: var(--placeholder-color);
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+#fav-button {
+  padding: 1.2rem 3.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-style: none;
+  border-radius: 0.5rem;
+
+  background-color: var(--bg-favbutton);
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+main {
+  outline: solid #4a808c 0.1rem;
+  border-radius: 1.2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  background: var(--bg-fav);
+  text-align: left;
+  font-weight: normal;
+  padding: 1.5rem;
+}
+
+table th:first-child {
+  border-top-left-radius: 1.2rem;
+  padding: 1.4rem 14.2rem 1.8rem 4rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 1.2rem;
+}
+
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  height: 56rem;
+  font-size: 4rem;
+  box-shadow: -2px 15px 2rem 0px rgb(0 0 0 / 50%);
+  color: #4e5455;
+  background-color: var(--bg-odd);
+}
+
+.empty svg {
+  width: 200rem;
+  height: 20rem;
+}
+
+table td {
+  padding: 1.7rem;
+}
+
+table td.user {
+  display: flex;
+  padding: 2.4rem 8.2rem 2.8rem 4rem;
+  gap: 2rem;
+  text-align: left;
+  align-items: center;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+a p {
+  font-weight: bold;
+}
+
+.remove {
+  border-style: none;
+  background: none;
+  color: #f75a68;
+  font-weight: bold;
+  font-size: medium;
+  cursor: pointer;
+}
+
+table tr:nth-child(even) {
+  background: var(--bg-even);
+}
+
+table tr:nth-child(odd) {
+  background: var(--bg-odd);
+}
